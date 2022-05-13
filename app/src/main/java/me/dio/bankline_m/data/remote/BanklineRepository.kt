@@ -10,7 +10,7 @@ object BanklineRepository {
     private val TAG = javaClass.simpleName
     private val restApi by lazy {
         Retrofit.Builder()
-            .baseUrl("http://localhost:8080/")
+            .baseUrl("http://localhost:8080/")  // Sem consigui acesso remoto com a máquina.
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(BanklineApi::class.java)
